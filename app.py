@@ -20,6 +20,10 @@ def generate_text():
 		return render_template('index.html', generated_texts=generated_texts)
 	except Exception as e:
 		logger.error(e)
+
+def create_app():
+	return app
+
 if __name__ == '__main__':
 	app.debug = False
 	app.run(host='0.0.0.0')
