@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  font-family: "Italiana", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 80%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+.box {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+input::placeholder {
+  color: #bcbbbb;
+}
+.promt-suggestions{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+  background: #fff;
+}
+.promt-suggestion{
+  width: 48%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  cursor: pointer;
+}
+button {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.loader {
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 10px auto;
+  display: none;
+}
+
+.output-heading {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.outputs-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  list-style: none;
+}
+.output:first-child {
+  margin-top: 0;
+}
+.output {
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.icon {
+  margin: 0 10px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+.fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 4px;
+  border-radius: 50%;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-github {
+  background: #ccc;
+  color: #000;
+}
+.fa-instagram {
+  background: #fff;
+  color: #d62976;
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    border-top-color: #3498db;
+  }
+  25% {
+    transform: rotate(90deg);
+    border-top-color: #e74c3c;
+  }
+  50% {
+    transform: rotate(180deg);
+    border-top-color: #2ecc71;
+  }
+  75% {
+    transform: rotate(270deg);
+    border-top-color: #f1c40f;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

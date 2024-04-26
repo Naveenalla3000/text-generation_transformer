@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+  <h2 class="title">Text Generater - AI</h2>
+  <form class="box" action="{{ url_for('generate_text')}}" method="POST">
+    <input type="text" name="text" placeholder="Enter the sample text here" />
+    <ul class="promt-suggestions">
+      <li class="promt-suggestion">Once upon a time</li>
+      <li class="promt-suggestion">The quick brown fox</li>
+      <li class="promt-suggestion">It was a dark and stormy night</li>
+      <li class="promt-suggestion">In a galaxy far far away</li>
+    </ul>
+    <button type="submit" onclick="loading()">Generate</button>
+  </form>
+  <div class="loader"></div>
+  <div class="">
+    {% if generated_texts %}
+    <h3 class="output-heading">Generated Outputs</h3>
+    <ul class="outputs-wrapper">
+      {% for output in generated_texts %}
+      <li class="output">{{ output['generated_text'] }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endblock %}
+</div>
